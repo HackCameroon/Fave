@@ -1,5 +1,5 @@
 angular
-  .module('fave.questionnare')
+  .module('fave.questionnaire')
   .factory('QuestionFactory', function(){
 
   })
