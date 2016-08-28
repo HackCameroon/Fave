@@ -4,6 +4,7 @@ angular.module('fave', [
   'fave.todo',
   'fave.home',
   'fave.canvas',
+  'fave.chat',
   'fave.questionnaire',
   'fave.nav'
 ])
