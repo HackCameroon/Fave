@@ -4,7 +4,8 @@ angular.module('fave', [
   'fave.todo',
   'fave.home',
   'fave.canvas',
-  'fave.questionnaire'
+  'fave.questionnaire',
+  'fave.nav'
 ])
 .config(function ($routeProvider) {
   'use strict';
@@ -13,7 +14,7 @@ angular.module('fave', [
       controller: 'CanvasCtrl',
       templateUrl: '/fave/canvas/canvas.html'
     })
-    .when('/home', {
+    .when('/', {
       controller: 'HomeCtrl',
       templateUrl: '/fave/home/home.html'
     })
@@ -25,7 +26,13 @@ angular.module('fave', [
       controller: 'TodoCtrl',
       templateUrl: '/fave/todo/todo.html'
     })
+    .when('/chat', {
+      controller: 'ChatCtrl',
+      templateUrl: '/fave/chat/chat.html'
+    })
     .otherwise({
       redirectTo: '/'
     });
+
+
 });

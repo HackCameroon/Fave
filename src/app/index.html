@@ -9,24 +9,40 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/todo/todo.css">
     <!-- endinject -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css">
   </head>
   <body>
-    <h1>fave</h1>
-    <h2>Your new AngularJS app is now ready...</h2>
+     <div class="nav nav-pills center" ng-controller="HeaderController">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
+                <li ng-class="{ active: isActive('/canvas')}"><a href="#/canvas">Express Yourself</a></li>
+                <li ng-class="{ active: isActive('/questionnaire')}"><a href="#/questionnaire">About You</a></li>
+                <li ng-class="{ active: isActive('/chat')}"><a href="#/chat">Chat</a></li>
+                <li><a class="btn btn-info" href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom"></div>
     <ng-view></ng-view>
     <!-- inject:vendor:js -->
     <script src="/angular/angular.js"></script>
     <script src="/angular-route/angular-route.js"></script>
     <script src="/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endinject -->
     <!-- inject:js -->
     <script src="/todo/todo.js"></script>
     <script src="/todo/todo-controller.js"></script>
     <script src="/questionnaire/questionnaire.js"></script>
     <script src="/questionnaire/questionnaire-controller.js"></script>
-    <script src="/localVendor/html5-canvas-drawing-app.js"></script>
     <script src="/home/home.js"></script>
     <script src="/home/home-controller.js"></script>
+    <script src="/nav/nav.js"></script>
+    <script src="/nav/nav-controller.js"></script>
+    <script src="/localVendor/html5-canvas-drawing-app.js"></script>
+    <script src="/chat/chat.js"></script>
+    <script src="/chat/chat-controller.js"></script>
     <script src="/canvas/canvas.js"></script>
     <script src="/canvas/canvas-controller.js"></script>
     <script src="/app.js"></script>
