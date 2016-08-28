@@ -1,13 +1,24 @@
 <section class="contianer">
   <div class="center">
-    <h1>About You</h1>
+    <h1 class="text-primary">About You</h1>
 
-    <div ng-repeat="question in questions" ng-model="answer">
+    <div ng-repeat="question in questions"  ng-show="(questionnaire[questions[$index-1]] || $index== 0) && !questionnaire[question]">
 
-      <p>{{question}}</p>
-      <input placholder="answer..">
-      <button type="submit" ng-click="save(answer)"></button>
+      <form class="form-inline">
+        <div class="form-group">
+          <label>{{question}}</label>
+          <input class="long-form" ng-model="answer">
+        </div>
+      </form>
+      <button class="btn btn-info" ng-click="save(question, answer)">Next</button>
     </div>
 
+    <div class="jumbotron" ng-show="isFull()">
+      <p>Read the <a href="http://statelaws.findlaw.com/california-law/california-domestic-violence-law.html">laws</a> applicable in your area for this type of abuse.</p>
+      <p>Visit the following helplines</p>
+      <ul>
+        <li><a href="http://www.thehotline.org/">Hotline for domestic abuse</a></li>
+      </ul>
+    </div>
   </div>
 </section>
