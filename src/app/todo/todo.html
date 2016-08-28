@@ -3,6 +3,7 @@
   <li class="todo-item" ng-repeat="todo in todos" ng-class="{'todo-done': todo.isDone}">
     <label><input type="checkbox" ng-click="check()" ng-model="todo.isDone"/>&nbsp;{{todo.label}}</label>
   </li>
+  <h3>hi</h3>
   <li class="todo-item">
     <form ng-submit="add()">
       <input type="text" placeholder="New item..." ng-model="label"/>
